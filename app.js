@@ -27,5 +27,22 @@ let packages = [
         isFragile: true,
         hasPackage: true,
     }
-  
 ]
+
+function drawPackages(packages) {
+    let packagesElement = document.getElementById('packages')
+    let packagesLineup = ''
+
+    Array.forEach(package => {
+        packageLineup += `<span title="${package.to}">${package.trackingNumber}/<span>`
+    })
+
+    packagesElement.innerHTML = packageLineup
+}
+
+
+
+
+
+
+drawPackages(packages)
